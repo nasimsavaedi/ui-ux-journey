@@ -22,10 +22,36 @@ Secondary (30%): #273C75 (Deep Blue)
 Accent (10%): #00A8FF (Sky Blue)
 
 📚 Resources I'm Following
-Built for Mars - UX Case Studies.
-
-Adobe Color - Color Exploration.
 
 Figma YouTube Channel - Official Tutorials.
+
+🎨 Color Tools
+Coolors: Super fast color schemes generator.
+
+Color Review: Check color contrast for accessibility.
+
+uiGradients: Beautiful color gradients for UI.
+
+Paletton: Professional color scheme designer.
+
+Flat UI Colors: Professional color palettes for web.
+
+🖼️ Illustrations & Icons
+unDraw: Open-source illustrations for any idea.
+
+Humaaans: Mix-&-match illustrations of people.
+
+Vecteezy & VectorPortal: High-quality vector graphics.
+
+Free3Dicon: Beautiful 3D icons for modern UI.
+
+Pixeden: Free web resources and mockups.
+
+KindPNG: Transparent PNG images for design.
+
+✨ Inspiration
+Dribbble: The world's leading community for creatives.
+
+Behance: Showcase and discover creative work.
 
 Follow my journey as I build my portfolio from scratch!
