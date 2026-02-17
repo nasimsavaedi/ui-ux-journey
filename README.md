@@ -8,9 +8,9 @@ Welcome to my learning repository! As a Computer Engineering student, Im explori
 
 [x] Study Color Theory and the 60-30-10 Rule.
 
-[ ] Research Responsive Design principles.
+[x] Research Responsive Design principles.
 
-[ ] Create a curated list of design inspiration from Dribbble and Behance.
+[x]  Create a curated list of design inspiration from Dribbble and Behance.
 
 🎨 Color Palette of the Week
 Thinking: Tech & Trust (Blue Theme)
@@ -55,3 +55,17 @@ Dribbble: The world's leading community for creatives.
 Behance: Showcase and discover creative work.
 
 Follow my journey as I build my portfolio from scratch!
+
+📖 My Reading List (Theoretical Foundation)
+I believe great design is backed by solid theory. Here are the core concepts I am studying:
+
+[x]10 Usability Heuristics for UI Design - Nielsen Norman Group
+
+[x] Gestalt Principles in Visual Design - Interaction Design Foundation
+
+[x] Color Theory & Accessibility (WCAG) - Smashing Magazine
+
+[x] Typography Systems in Material Design 3 - Google Design
+
+[x] Laws of UX - Learning the psychology behind user behavior
+
