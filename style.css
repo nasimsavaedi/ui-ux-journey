@@ -6,29 +6,67 @@
 }
 
 body {
-    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    
+    /* تعریف رنگ‌ها به صورت متغیر برای جابجایی راحت */
+    --bg-color-1: #3b82f6;
+    --bg-color-2: #818cf8;
+    --bg-color-3: #db2777;
+
+    background: linear-gradient(45deg, var(--bg-color-1), var(--bg-color-2), var(--bg-color-3));
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite !important; /* اجبار به اجرای انیمیشن */
+    transition: --bg-color-1 0.8s, --bg-color-2 0.8s, --bg-color-3 0.8s;
 }
+
+/* حالا فقط رنگ متغیرها رو در حالت دارک عوض می‌کنیم */
+body.dark-mode {
+    --bg-color-1: #0f172a;
+    --bg-color-2: #1e293b;
+    --bg-color-3: #334155;
+}
+
+  
 
 /* باکس اصلی کارت */
 .card {
-    background-color: #3b82f6; /* رنگ آبی برند تو */
+    /* رنگ سفید با شفافیت کم */
+    background: rgba(255, 255, 255, 0.1); 
+    /* مات کردن محتویات پشت شیشه */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    /* لبه‌های براق برای حس شیشه‌ای */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    body.dark-mode .card {
+    background: rgba(0, 0, 0, 0.3); /* شیشه دودی */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    color: #f1f5f9;
+}
+    
     width: 340px;
     padding: 40px 20px;
-    border-radius: 35px;
+    border-radius: 25px;
     text-align: center;
     color: white;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     
-    /* چیدمان عمودی تمام محتویات کارت */
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: slideUp 1s ease-out forwards;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
+    
+
+
 
 .avatar {
     width: 110px;
@@ -143,4 +181,29 @@ body.dark-mode #theme-toggle {
         right: 10px;
         padding: 8px;
     }
+}
+.connect-btn {
+    transition: all 0.3s ease;
+}
+
+.connect-btn:hover {
+    box-shadow: 0 0 20px rgba(251, 255, 21, 0.752); /* درخشش زرد دور دکمه */
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
