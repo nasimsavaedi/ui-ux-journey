@@ -65,6 +65,10 @@ I believe great design is backed by solid theory. Here are the core concepts I a
 
 [x] Color Theory & Accessibility (WCAG) - Smashing Magazine
 
+[x] Typography Systems in Material Design 3 - Google Design
+
+[x] Laws of UX - Learning the psychology behind user behavior
+
 # 📇 Personal Profile Card (Interactive Edition)
 
 Welcome to my first web development project! I designed this card from scratch in **Figma** and brought it to life using **HTML, CSS, and JavaScript**.
@@ -87,8 +91,6 @@ You can see the project live here: [https://nasimsavaedi.github.io/ui-ux-journey
 
 ---
 Created with ❤️ by Nasim Savaedi
-
 [x] Typography Systems in Material Design 3 - Google Design
 
-[x] Laws of UX - Learning the psychology behind user behavior
-
+[x] Laws of UX - Learning the psychology behind user behavi
