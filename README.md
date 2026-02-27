@@ -91,6 +91,3 @@ You can see the project live here: [https://nasimsavaedi.github.io/ui-ux-journey
 
 ---
 Created with ❤️ by Nasim Savaedi
-[x] Typography Systems in Material Design 3 - Google Design
-
-[x] Laws of UX - Learning the psychology behind user behavi
