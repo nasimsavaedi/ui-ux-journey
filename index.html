@@ -3,42 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Card</title>
+    <title>Nasim's Interactive Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="theme-toggle">
-    <img src="sun.svg" id="theme-icon" alt="Toggle Theme">
-</div>
+    <div id="theme-toggle"><img src="sun.svg" id="theme-icon"></div>
 
-        <div class="card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.5">
-        <div class="avatar-container">
-            <img src="avatar.png" alt="Profile Picture" class="avatar">
-        </div>
+    <div class="card-container">
+        <div class="card" id="main-card">
+            
+            <div class="card-face card-front">
+                <div class="top-content">
+                    <img src="avatar.png" class="avatar">
+                    <h1>Nasim Savaedi</h1>
+                    <p>Computer Engineering Student</p>
+                    <div class="socials">
+                        <a href="https://github.com/nasimsavaedi"><i class="fab fa-github"></i></a>
+                        <a href="nasim.savaedi@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/nasimsvdi?igsh=MjNvcDhwMjN0NnR3"><i class="fab fa-instagram"></i></a>
+                        <a href="t.me/nasimsvdi"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <button class="flip-btn" onclick="flipCard()">About Me</button>
+            </div>
 
-        <div class="info">
-            <h1>Nasim Savaedi</h1>
-            <p>Computer Engineering Student | UI/UX Explorer</p>
-        </div>
+            <div class="card-face card-back">
+                <div class="top-content">
+                    <h2>About Me</h2>
+                    <p class="bio">I am a <b>Computer Engineering</b> student with a passion for <b>UI/UX Design</b>. I love creating beautiful and interactive digital experiences. 🚀</p>
+                    <div class="skills">
+                        <span>🌐 HTML</span> <span>🎨 CSS</span> <span>⚡ JS</span>
+                    </div>
+                </div>
+                <button class="flip-btn" onclick="flipCard()">Back</button>
+            </div>
 
-        <button class="connect-btn">Let's Connect!</button>
-
-        <div class="socials">
-            <a href="https://github.com/YOUR_USERNAME" target="_blank">
-                <img src="github.png" alt="GitHub">
-            </a>
-            <a href="mailto:YOUR_EMAIL@gmail.com">
-                <img src="gmail.png" alt="Gmail">
-            </a>
-            <a href="#" target="_blank">
-                <img src="instagram.png" alt="Instagram">
-            </a>
-            <a href="#" target="_blank">
-                <img src="telegram.png" alt="telegram"
-            </a> 
         </div>
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>

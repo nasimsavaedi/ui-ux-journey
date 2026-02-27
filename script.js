@@ -1,14 +1,9 @@
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const body = document.body;
+function flipCard() {
+    document.getElementById('main-card').classList.toggle('flipped');
+}
 
-themeToggle.addEventListener('click', () => {
+const body = document.body;
+document.getElementById('theme-toggle').addEventListener('click', () => {
     body.classList.toggle('dark-mode');
-    
-    // عوض کردن آیکون بین ماه و خورشید
-    if (body.classList.contains('dark-mode')) {
-        themeIcon.src = 'moon.svg';
-    } else {
-        themeIcon.src = 'sun.svg';
-    }
+    document.getElementById('theme-icon').src = body.classList.contains('dark-mode') ? 'moon.svg' : 'sun.svg';
 });

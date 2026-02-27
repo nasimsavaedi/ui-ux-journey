@@ -1,209 +1,77 @@
-/* ریست کردن تنظیمات اولیه مرورگر */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+:root { --b1: #3b82f6; --b2: #db2777; }
+body.dark-mode { --b1: #0f172a; --b2: #1e293b; }
 
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+ body {
+    margin: 0; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
     align-items: center;
-    height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-    
-    /* تعریف رنگ‌ها به صورت متغیر برای جابجایی راحت */
-    --bg-color-1: #3b82f6;
-    --bg-color-2: #818cf8;
-    --bg-color-3: #db2777;
+    font-family: 'Segoe UI', sans-serif; 
+    overflow: hidden;
 
-    background: linear-gradient(45deg, var(--bg-color-1), var(--bg-color-2), var(--bg-color-3));
+    /* تنظیمات پس‌زمینه متحرک */
+    background: linear-gradient(45deg, var(--b1), var(--b2), #6366f1, #a855f7);
     background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite !important; /* اجبار به اجرای انیمیشن */
-    transition: --bg-color-1 0.8s, --bg-color-2 0.8s, --bg-color-3 0.8s;
+    animation: gradientBG 12s ease infinite;
+    transition: 0.8s;
 }
 
-/* حالا فقط رنگ متغیرها رو در حالت دارک عوض می‌کنیم */
-body.dark-mode {
-    --bg-color-1: #0f172a;
-    --bg-color-2: #1e293b;
-    --bg-color-3: #334155;
-}
-
-  
-
-/* باکس اصلی کارت */
-.card {
-    /* رنگ سفید با شفافیت کم */
-    background: rgba(255, 255, 255, 0.1); 
-    /* مات کردن محتویات پشت شیشه */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    /* لبه‌های براق برای حس شیشه‌ای */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    body.dark-mode .card {
-    background: rgba(0, 0, 0, 0.3); /* شیشه دودی */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    color: #f1f5f9;
-}
-    
-    width: 340px;
-    padding: 40px 20px;
-    border-radius: 25px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: slideUp 1s ease-out forwards;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-    
-
-
-
-.avatar {
-    width: 110px;
-    height: 110px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 8px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-h1 {
-    font-size: 26px;
-    margin-bottom: 8px;
-}
-
-p {
-    font-size: 14px;
-    opacity: 0.85;
-    margin-bottom: 25px;
-}
-
-/* استایل دکمه */
-.connect-btn {
-    background-color: #fef08a; /* زرد ملایم */
-    color: #1e40af;
-    border: none;
-    padding: 12px 35px;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.connect-btn:hover {
-    background-color: #fde047;
-    transform: scale(1.05);
-}
-
-/* مرتب کردن آیکون‌های زیر کارت */
-.socials {
-    margin-top: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px; /* ایجاد فاصله مساوی بین آیکون‌ها */
-}
-
-.socials img {
-    width: 26px;
-    height: 26px;
-    filter: brightness(0) invert(1); /* سفید کردن آیکون‌های مشکی */
-    transition: transform 0.3s;
-}
-
-.socials img:hover {
-    transform: translateY(-5px); /* افکت حرکت به بالا در هنگام هاور */
-}
-/* تنظیمات دکمه سوئیچ */
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    background: #d9ff00;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* وقتی کلاس dark-mode به body اضافه بشه، این رنگ‌ها اعمال میشن */
-body.dark-mode {
-    background-color: #232343;
-}
-
-body.dark-mode .card {
-    background-color: #253a72;
-    color: #00FF1A;
-}
-
-body.dark-mode #theme-toggle {
-    background: #0f3460;
-}
-/* مخصوص موبایل‌ها و صفحات کوچک */
-@media (max-width: 480px) {
-    .card {
-        width: 90%; /* کارت فضای بیشتری از صفحه موبایل رو بگیره */
-        padding: 30px 15px; /* پدینگ کمتر برای جای بیشتر */
-        border-radius: 20px; /* لبه‌های کمی تیزتر برای موبایل */
-    }
-
-    .avatar {
-        width: 80px; /* عکس پروفایل یکم کوچکتر بشه */
-        height: 80px;
-    }
-
-    h1 {
-        font-size: 20px; /* فونت‌ها رو یکم ریزتر می‌کنیم که تو چشم نزنه */
-    }
-
-    p {
-        font-size: 13px;
-    }
-
-    .socials {
-        gap: 15px; /* فاصله آیکون‌ها رو کمتر می‌کنیم */
-    }
-
-    #theme-toggle {
-        top: 10px; /* دکمه ماه و خورشید بیاد یکم بالاتر */
-        right: 10px;
-        padding: 8px;
-    }
-}
-.connect-btn {
-    transition: all 0.3s ease;
-}
-
-.connect-btn:hover {
-    box-shadow: 0 0 20px rgba(251, 255, 21, 0.752); /* درخشش زرد دور دکمه */
-    transform: scale(1.1);
-}
-
-h1 {
-    font-size: 26px;
-    margin-bottom: 8px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-p {
-    font-size: 14px;
-    opacity: 0.9;
-    margin-bottom: 25px;
-}
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+.card-container { width: 320px; height: 460px; perspective: 1000px; }
+
+.card {
+    width: 100%; height: 100%; position: relative;
+    transform-style: preserve-3d; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card.flipped { transform: rotateY(180deg); }
+
+.card-face {
+    position: absolute; width: 100%; height: 100%;
+    backface-visibility: hidden; border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex; flex-direction: column; 
+    justify-content: space-between; /* دکمه رو می‌فرسته پایین */
+    padding: 35px 25px; box-sizing: border-box; color: white; text-align: center;
+}
+
+.card-back { transform: rotateY(180deg); }
+
+.avatar { width: 100px; height: 100px; border-radius: 50%; border: 3px solid white; margin-bottom: 10px; }
+.socials { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
+.socials a { color: white; font-size: 22px; transition: 0.3s; }
+.socials a:hover { color: #feb026; transform: translateY(-3px); }
+
+.bio { font-size: 14px; line-height: 1.6; margin-top: 15px; }
+.skills { margin-top: 10px; font-size: 12px; display: flex; gap: 10px; justify-content: center; opacity: 0.8; }
+
+.flip-btn {
+    background: #feb026; 
+    border: none; 
+    padding: 12px; 
+    border-radius: 50px; 
+    font-weight: bold; 
+    cursor: pointer;
+    width: 100%; 
+    color: #1a1a2e;
+    transition: all 0.3s ease;
+    /* سایه درخشان اولیه */
+    box-shadow: 0 4px 15px rgba(191, 188, 14, 0.956);
+}
+
+.flip-btn:hover {
+    background: white;
+    transform: scale(1.05);
+    /* درخشش شدید موقع هاور */
+    box-shadow: 0 0 20px rgba(254, 176, 38, 0.6), 0 0 40px rgba(221, 255, 0, 0.941);
+}
+
+#theme-toggle { position: fixed; top: 20px; right: 20px; cursor: pointer; }
+#theme-icon { width: 30px; }
