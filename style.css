@@ -88,3 +88,28 @@ p {
 .socials img:hover {
     transform: translateY(-5px); /* افکت حرکت به بالا در هنگام هاور */
 }
+/* تنظیمات دکمه سوئیچ */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: #d9ff00;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* وقتی کلاس dark-mode به body اضافه بشه، این رنگ‌ها اعمال میشن */
+body.dark-mode {
+    background-color: #232343;
+}
+
+body.dark-mode .card {
+    background-color: #253a72;
+    color: #00FF1A;
+}
+
+body.dark-mode #theme-toggle {
+    background: #0f3460;
+}
