@@ -65,6 +65,29 @@ I believe great design is backed by solid theory. Here are the core concepts I a
 
 [x] Color Theory & Accessibility (WCAG) - Smashing Magazine
 
+# 📇 Personal Profile Card (Interactive Edition)
+
+Welcome to my first web development project! I designed this card from scratch in **Figma** and brought it to life using **HTML, CSS, and JavaScript**.
+
+## ✨ Features
+- **Pixel Perfect Design:** Translated directly from my Figma mockup.
+- **Dark/Light Mode:** Integrated a theme switcher with a Sun/Moon icon.
+- **Interactive Social Links:** Hover effects and direct links to my GitHub, Gmail, and LinkedIn.
+- **Clean Code:** Structured using modern CSS Flexbox.
+
+## 🛠️ Tech Stack
+- **Design:** Figma
+- **Structure:** HTML5
+- **Styling:** CSS3 (Custom Properties & Flexbox)
+- **Logic:** Vanilla JavaScript (DOM Manipulation)
+- **Deployment:** GitHub Pages
+
+## 🚀 Live Demo
+You can see the project live here: [https://nasimsavaedi.github.io/ui-ux-journey/]
+
+---
+Created with ❤️ by Nasim Savaedi
+
 [x] Typography Systems in Material Design 3 - Google Design
 
 [x] Laws of UX - Learning the psychology behind user behavior
