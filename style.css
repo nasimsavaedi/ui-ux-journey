@@ -113,3 +113,34 @@ body.dark-mode .card {
 body.dark-mode #theme-toggle {
     background: #0f3460;
 }
+/* مخصوص موبایل‌ها و صفحات کوچک */
+@media (max-width: 480px) {
+    .card {
+        width: 90%; /* کارت فضای بیشتری از صفحه موبایل رو بگیره */
+        padding: 30px 15px; /* پدینگ کمتر برای جای بیشتر */
+        border-radius: 20px; /* لبه‌های کمی تیزتر برای موبایل */
+    }
+
+    .avatar {
+        width: 80px; /* عکس پروفایل یکم کوچکتر بشه */
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 20px; /* فونت‌ها رو یکم ریزتر می‌کنیم که تو چشم نزنه */
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .socials {
+        gap: 15px; /* فاصله آیکون‌ها رو کمتر می‌کنیم */
+    }
+
+    #theme-toggle {
+        top: 10px; /* دکمه ماه و خورشید بیاد یکم بالاتر */
+        right: 10px;
+        padding: 8px;
+    }
+}
